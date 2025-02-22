@@ -1,6 +1,7 @@
 """This file is the webserver based on Flask to serve the SimpleResume web application.
 """
 from flask import Flask, render_template, make_response
+from flask_wtf.csrf import CSRFProtect
 from users import load_dummy_users
 
 
@@ -8,9 +9,11 @@ from users import load_dummy_users
 APP                 = Flask(__name__)
 APP.config["DEBUG"] = True
 HOST                = "0.0.0.0"
-PORT                = 5000
-DATABASE_USER       = "admin"
-DATABASE_PASSWORD   = "admin12345678"
+PORT                = 3000
+
+# CSRF
+csrf = CSRFProtect()
+csrf.init_app(APP)
 
 
 @APP.route("/")
