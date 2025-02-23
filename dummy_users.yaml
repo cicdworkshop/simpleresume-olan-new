@@ -1,8 +1,8 @@
 john:
-  name: John Doe
+  name: Olan
   address: 123 Main St, Anytown, USA
   phone: 555-555-5555
-  email: johndoe@example.com
+  email: olan@example.com
   description: |
     I am an experienced software engineers with a passion for building great CI/CD pipeline and automating all the
     things. I have worked with a variety of technologies and am always looking to learn new things.
